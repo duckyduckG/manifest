@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Local manifest for vayu - Kernel 4.19
+-->
+<manifest>
+
+  <!-- Remotes -->
+  <remote name="ducks54" fetch="https://github.com/" />
+  <remote name="duckyduckg" fetch="https://github.com/" />
+
+  <!-- 1. Remove cureent projects -->
+  <remove-project name="LineageOS/android_device_xiaomi_vayu" optional="true" />
+  <remove-project name="LineageOS/android_device_xiaomi_sm8150-common" optional="true" />
+  <remove-project name="LineageOS/proprietary_vendor_xiaomi_vayu" optional="true" />
+  <remove-project name="LineageOS/proprietary_vendor_xiaomi_sm8150-common" optional="true" />
+  <remove-project name="LineageOS/android_kernel_xiaomi_sm8150" optional="true" />
+  <remove-project name="LineageOS/android_hardware_xiaomi" optional="true" path="hardware/xiaomi" />
+
+  <remove-project name="LineageOS/android_hardware_qcom_audio" path="hardware/qcom-caf/sm8250/audio" />
+  <remove-project name="LineageOS/android_hardware_qcom_media" path="hardware/qcom-caf/sm8250/media" />
+  <remove-project name="LineageOS/android_hardware_qcom_display" path="hardware/qcom-caf/sm8250/display" />
+  <remove-project name="LineageOS/android_hardware_qcom-caf_common" path="hardware/qcom-caf/common" />
+
+  <!-- Device Tree 4.19 -->
+  <project name="DUCKS-QCM-5-4/android_device_xiaomi_vayu"
+           path="device/xiaomi/vayu"
+           remote="ducks54"
+           revision="lineage-24.0_4.19" />
+
+  <project name="DUCKS-QCM-5-4/android_device_xiaomi_sm8150-common"
+           path="device/xiaomi/sm8150-common"
+           remote="ducks54"
+           revision="lineage-24.0_4.19" />
+
+  <!-- Vendor Tree 4.19 -->
+  <project name="DUCKS-QCM-5-4/proprietary_vendor_xiaomi_vayu"
+           path="vendor/xiaomi/vayu"
+           remote="ducks54"
+           revision="lineage-24.0_4.19" />
+
+  <project name="DUCKS-QCM-5-4/proprietary_vendor_xiaomi_sm8150-common"
+           path="vendor/xiaomi/sm8150-common"
+           remote="ducks54"
+           revision="lineage-24.0_4.19" />
+
+  <!-- Kernel 4.19 -->
+  <project name="duckyduckG/android_kernel_xiaomi_sm8150_419"
+           path="kernel/xiaomi/sm8150"
+           remote="duckyduckg"
+           revision="lineage-24.0_xiaomi" />
+
+  <!-- Upstream -->
+  <project name="LineageOS/android_hardware_xiaomi"
+           path="hardware/xiaomi"
+           revision="lineage-24.0" />
+
+  <!-- Kernel 4.19 hals -->
+  <project name="duckyduckG/android_hardware_qcom_audio"
+           path="hardware/qcom-caf/sm8250/audio"
+           remote="duckyduckg"
+           revision="lineage-24.0-caf-sm8250" />
+
+  <project name="duckyduckG/android_hardware_qcom_media"
+           path="hardware/qcom-caf/sm8250/media"
+           remote="duckyduckg"
+           revision="lineage-24.0-caf-sm8250" />
+
+  <project name="duckyduckG/android_hardware_qcom_display"
+           path="hardware/qcom-caf/sm8250/display"
+           remote="duckyduckg"
+           revision="lineage-24.0-caf-sm8250" />
+
+  <project name="duckyduckG/android_hardware_qcom-caf_common"
+           path="hardware/qcom-caf/common"
+           remote="duckyduckg"
+           revision="lineage-24.0" />
+
+</manifest>
